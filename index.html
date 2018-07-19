@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">hide show bootstrap
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home page for pokemart shop">
+    <meta name="author" content="Giancarlo Sanz">
+    <title>Pokémart</title>
+    <style>
+        .sidebar {
+            height: 100%;
+            width: auto;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background: #061d4a;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding: 0px 0px 0px 0px;
+        }
+
+        .sidebar a{
+            color: #ffffff;
+            padding: 16px 8px 16px 16px;
+            text-decoration: none;
+            font-size: 30px;
+            font-family: Tahoma;
+            text-shadow: 0 0 2px #737877;/*-1px 1px 0 #000,
+            1px 1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000;*/
+            font-weight: bold;
+            display: block;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            text-shadow: unset;
+            background: #0ea8f1;
+            color: black;
+        }
+
+        .modal-backdrop{
+            z-index: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper" class="active row">
+
+        <!-- Sidebar -->
+            <div id="sidebar-wrapper" class="sidebar col-md-4 col-12">
+                <img src="./media/pokeshop.png" alt="Pokémart Logo" width="200" height="auto">
+                <a class="active" href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a data-toggle="modal" href="#loginModal">Account</a>
+                <a href="#about">About Us</a>
+                <div class="search-container">
+                    <form action="#doSearch"></form>
+                </div>
+
+                <!-- Modal -->
+                <div class="modal fade" tabindex="-1" id="loginModal" role="dialog" aria-labelledby="loginModalCenter" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle">Sign In</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="username" class="col-form-label">Username:</label>
+                                        <input type="text" class="form-control" id="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password" class="col-form-label">Password:</label>
+                                        <input type="text" class="form-control" id="password">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Login</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add footer -->
+
+            </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
