@@ -1,0 +1,86 @@
+/*:not(path):not(g) {
+    color:                    hsla(210, 100%, 100%, 0.9) !important;
+    background:               hsla(210, 100%,  50%, 0.5) !important;
+    outline:    solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+    box-shadow: none !important;
+}*/
+
+*{
+    margin:0;
+    border:0;
+    padding:0;
+}
+
+body, html, #wrapper{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #061d4a;
+    transition: 0.5s;
+    padding: 0px 0px 0px 0px;
+}
+
+.sidebar a{
+    color: #ffffff;
+    padding: 16px 8px 16px 16px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Tahoma;
+    text-shadow: 0 0 2px #737877;/*-1px 1px 0 #000,
+            1px 1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000;*/
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    text-shadow: unset;
+    background: #0ea8f1;
+    color: black;
+}
+
+.modal-backdrop{
+    z-index: auto;
+}
+
+.modal-header{
+    background-color: #061d4a;
+    color: white;
+}
+
+.modal-footer a{
+    all: unset;
+    text-decoration-line: underline;
+    color: #027eff;
+}
+
+.modal-body a{
+    all: unset;
+    color: #027eff;
+    text-decoration-line: underline;
+}
+
+.point{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 650px){
+    #sidebar-wrapper{
+        width: 100%;
+    }
+
+    .sidebar{
+        height: fit-content;
+    }
+
+}
