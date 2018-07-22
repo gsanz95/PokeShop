@@ -10,7 +10,6 @@
     <meta name="description" content="PokeShop">
     <meta name="author" content="Giancarlo Sanz">
     <title>PokéShop - Cart</title>
-    <script>pageInit();</script>
 </head>
 <body>
 <div id="wrapper">
@@ -79,7 +78,7 @@
                             </div>
                             <div class="card-body col-md-4">
                                 <p>Price: <br>Qty:</p>
-                                <button type="button" class="btn btn-danger" id="btnRemove1"><i class="fas fa-trash"></i> Remove</button>
+                                <button type="button" class="btn btn-danger" id="btnRemove1" onclick="removeItem(this)"><i class="fas fa-trash"></i> Remove</button>
                             </div>
                         </div>
                     </div>
@@ -93,7 +92,7 @@
                             </div>
                             <div class="card-body col-md-4">
                                 <p>Price: <br>Qty:</p>
-                                <button type="button" class="btn btn-danger" id="btnRemove2"><i class="fas fa-trash"></i> Remove</button>
+                                <button type="button" class="btn btn-danger" id="btnRemove2" onclick="removeItem(this)"><i class="fas fa-trash"></i> Remove</button>
                             </div>
                         </div>
                     </div>
