@@ -75,8 +75,11 @@ body, html, #wrapper{
 }
 
 @media screen and (max-width: 650px){
-    #sidebar-wrapper{
+    #myScrollspy{
         width: 100%;
+    }
+    .form-check{
+        justify-items: center;
     }
 
     .sidebar{
