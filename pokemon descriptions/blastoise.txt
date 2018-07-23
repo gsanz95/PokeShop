@@ -1,0 +1,13 @@
+Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets of water with enough accuracy to strike empty cans from a distance of over 160 feet.
+
+Height: 5' 03"
+
+Weight: 188.5 lbs
+
+Gender: male/female
+
+Category: Shellfish
+
+Abilities: Torrent, TypeWater
+
+Weaknesses: Electric, Grass

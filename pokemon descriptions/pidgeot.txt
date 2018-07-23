@@ -1,0 +1,15 @@
+This Pokémon has a dazzling plumage of beautifully glossy feathers. Many Trainers are captivated by the striking beauty of the feathers on its head, compelling them to choose Pidgeot as their Pokémon.
+
+Height: 4' 11"
+
+Weight: 87.1 lbs
+
+Gender: male/female
+
+Category: Bird
+
+Abilities: Keen Eye, Tangled Feet
+
+Type: Normal, Flying
+
+Weaknesses: Electric, Ice, Rock

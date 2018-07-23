@@ -1,0 +1,15 @@
+Diglett are raised in most farms. The reason is simple— wherever this Pokémon burrows, the soil is left perfectly tilled for planting crops. This soil is made ideal for growing delicious vegetables.
+
+Height: 0' 08"
+
+Weight: 1.8 lbs
+
+Gender: male/female
+
+Category: Mole
+
+Abilities: Sand Veil, Arena Trap
+
+Type: Ground
+
+Weaknesses: Grass, Ice, Water

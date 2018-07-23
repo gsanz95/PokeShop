@@ -1,0 +1,15 @@
+Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is said that when this Pokémon flies, snow will fall.
+
+Height: 5' 07"
+
+Weight: 122.1 lbs
+
+Gender: Unknown
+
+Category: Freeze
+
+Abilities: Pressure
+
+Type: Ice, Flying
+
+Weaknesses: Rock, Electric, Fire, Steel
