@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="PokeShop">
     <meta name="author" content="Giancarlo Sanz">
-    <title>PokéShop - My Account</title>
+    <title>PokéShop - Cart</title>
 </head>
 <body>
 <div id="wrapper">
@@ -64,17 +64,67 @@
 
             <!-- Page Content -->
             <div class="col-lg-10 h-100 col-sm-9 col-12">
-                <div id="page-header" class="alert-heading">
-                    <h1 class="text-center font-weight-bold" aria-label="Welcome to the PokeShop!">Your Account</h1>
-                </div>
-                <div class="h-auto">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="img-fluid p-5 col">
+                            <img src="./images/pokemon%20pngs/charmanderFull.png" height="600" width="600" class="img-fluid">
+                        </div>
+                        <div class="col px-4 pt-5">
+                            <h2 class="font-weight-bold" aria-label="Product Name">Product Name</h2>
+                            <h5>Types: </h5><a>Fire, Something else</a>
+                            <br><br>
+                            <h6>Pokemon Description:</h6>
+                            <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit id illo neque quam reiciendis, rerum ut vero? Eius minus praesentium reprehenderit. Aperiam asperiores aut autem commodi, ducimus fuga laudantium magnam mollitia necessitatibus, nemo numquam possimus praesentium repellat sed similique! Ab aliquam consectetur cum cumque cupiditate eos expedita fugit id illum inventore laborum magni nihil non qui ratione, repellendus ullam veritatis.</p>
+                            <form method="post" action="#addToCart">
+                                <div class="form-inline justify-content-end my-2">
+                                    <label class="" for="itemQuantity"><h5>Qty: </h5></label>
+                                    <select class="custom-select" name="itemQuantity" id="itemQuantity">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                    </select>
+                                </div>
+                                <button type="submit" id="btnCheckout" class="btn btn-info btn-block"><i class="fas fa-plus"></i> Add To Cart</button>
+                            </form>
+                            <h4 class="text-right">Price: <span class="text-danger">$999.00</span></h4>
+                        </div>
+                    </div>
+                    <div class="card-deck">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="./images/pokemon%20pngs/pikachuThumb.png" class="card-img-top img-fluid">
+                                <a href="#producturl"><h5 class="text-center card-title">Product Name</h5></a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, omnis.</p>
+                            </div>
+                        </div>
+                        <div class="card">
 
+                        </div>
+                        <div class="card">
+
+                        </div>
+                        <div class="card">
+
+                        </div>
+                        <div class="card">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+<script src="js/functionality.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="js/bootstrap.js"></script>
