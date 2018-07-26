@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +25,10 @@
             <div class="col-lg-2 h-100 col-sm-3 col-12">
                 <nav id="myScrollspy" class="sidebar sidebar-nav">
                     <img class="img-fluid" src="./media/pokeshop.png" alt="Pokémart Logo" width="325" height="auto">
-                    <a class="active" href="./home.html">Home</a>
-                    <a href="#products">Products</a>
-                    <a data-toggle="modal" href="#loginModal">Account</a>
-                    <a href="#about">About Us</a>
+                    <a class="active" href="./home.php">Home</a>
+                    <a href="products.php">Products</a>
+                    <a href="login.php">Account</a>
+                    <a href="about.php">About Us</a>
                     <div class="search-container">
                         <form action="#doSearch"></form>
                     </div>
@@ -33,8 +39,8 @@
                     </div>
                 </nav>
             </div>
-
-            <!-- Modal -->
+ 	    
+	    <!-- Modal -->
             <div class="modal fade" tabindex="-1" id="loginModal" role="dialog" aria-labelledby="loginModalCenter" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -43,18 +49,18 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="text-white">&times;</span></button>
                         </div>
                         <div class="modal-body">
-                            <form action="#login">
+                            <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                 <div class="form-group">
-                                    <label for="username" class="col-form-label">Username:</label>
-                                    <input type="text" class="form-control" id="username">
+                                    <label for="email" class="col-form-label">Username:</label>
+                                     <input type="text" class="form-control" id="email" name="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-form-label">Password:</label>
-                                    <input type="text" class="form-control" id="password">
+                                    <input type="text" class="form-control" id="password" name="password">
                                     <a href="#forgotpassword" role="link"><span class="point">Forgot Password?</span></a>
                                 </div>
-                                <a href="./createaccount.html" role="link"><span class="point">Create Account</span></a>
-                                <button type="submit" class="btn btn-primary float-right">Login</button>
+                                <a href="./createaccount.php" role="link"><span class="point">Create Account</span></a>
+                                <button name="login" type="submit" class="btn btn-primary float-right">Login</button>
                             </form>
                         </div>
 
@@ -65,8 +71,9 @@
             <!-- Page Content -->
             <div class="col-lg-10 h-100 col-sm-9 col-12">
                 <div id="page-header" class="alert-heading">
-                    <h1 class="text-center font-weight-bold" aria-label="Welcome to the PokeShop!">Welcome to the PokeShop!</h1>
-                </div>
+		    	<h1 class="text-center font-weight-bold" aria-label="About Us!">About Us</h1>
+			<iframe width="1000" height="2000" src="aboutDesc.txt"></iframe>		
+		</div>
                 <div class="h-auto">
 
                 </div>
