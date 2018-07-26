@@ -25,13 +25,14 @@ session_start();
             <div class="col-lg-2 h-100 col-sm-3 col-12">
                 <nav id="myScrollspy" class="sidebar sidebar-nav">
                     <img class="img-fluid" src="./media/pokeshop.png" alt="Pokémart Logo" width="325" height="auto">
+					<form action="#doSearch" method='get' class='form-inline'>
+						<input type='search' class='form-control ml-1' placeholder='Search...' id='searchItem' name='searchItem'>
+						<button class="btn btn-primary mx-1" type="submit">Search</button>
+					</form>
                     <a class="active" href="./home.php">Home</a>
                     <a href="products.php">Products</a>
                     <a href="login.php">Account</a>
                     <a href="about.php">About Us</a>
-                    <div class="search-container">
-                        <form action="#doSearch"></form>
-                    </div>
 
                     <!-- Footer -->
                     <div class="text-white text-center">
