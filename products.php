@@ -36,6 +36,9 @@
             </div>
 	    
 	    <!-- Modal -->
+		<div class='position-absolute' style='z-index:1200; @include float-right;'>
+                <a class='btn btn-primary' id='cartButton' href='./cart.html'><i class='fas fa-shopping-cart'></i></a>
+            </div>
             <div class="modal fade" tabindex="-1" id="loginModal" role="dialog" aria-labelledby="loginModalCenter" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">

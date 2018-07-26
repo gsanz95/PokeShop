@@ -63,6 +63,9 @@
             </div>
 
             <!-- Page Content -->
+            <div class='position-absolute' style='z-index:1200; @include float-right;'>
+                <a class='btn btn-primary' id='cartButton' href='./cart.html'><i class='fas fa-shopping-cart'></i></a>
+            </div>
             <div class="col-lg-10 h-100 col-sm-9 col-12">
                 <div class="container-fluid">
                     <div class="row">
