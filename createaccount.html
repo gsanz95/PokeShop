@@ -45,12 +45,12 @@
                         <div class="modal-body">
                             <form action="#login">
                                 <div class="form-group">
-                                    <label for="username" class="col-form-label">Username:</label>
-                                    <input type="text" class="form-control" id="username">
+                                    <label for="email" class="col-form-label">Username:</label>
+                                    <input type="text" class="form-control" id="email" name="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-form-label">Password:</label>
-                                    <input type="text" class="form-control" id="password">
+                                    <input type="text" class="form-control" id="password" name="password">
                                     <a href="#forgotpassword" role="link"><span class="point">Forgot Password?</span></a>
                                 </div>
                                 <a href="./createaccount.html" role="link"><span class="point">Create Account</span></a>
@@ -72,24 +72,24 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="firstname">First Name:</label>
-                                <input type="text" class="form-control" id="firstname" placeholder="John">
+                                <input type="text" class="form-control" id="firstname" placeholder="John" name="firstname">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="lastname">Last Name:</label>
-                                <input type="text" class="form-control" id="lastname" placeholder="Appleseed">
+                                <input type="text" class="form-control" id="lastname" placeholder="Appleseed" name="lastname">
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="inputAddress">Address</label>
-                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="inputAddress">
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="inputAddress2">Address 2</label>
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apt. #">
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Apt. #" name="inputAddress2">
                             </div>
 
                             <div class="form-group col-md-6">
                                 <label for="city">City</label>
-                                <input type="text" class="form-control" id="city" placeholder="City">
+                                <input type="text" class="form-control" id="city" placeholder="City" name="city">
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="state">State</label>
@@ -151,34 +151,34 @@
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="zipCode">Zip</label>
-                                <input type="text" class="form-control" id="zipCode" placeholder="12345">
+                                <input type="text" class="form-control" id="zipCode" placeholder="12345" name="zipCode">
                             </div>
 
                             <div class="form-group col-md-12">
-                                <label for="usernamesignin">Email Address</label>
-                                <input type="email" class="form-control" id="usernamesignin" aria-describedby="emailHelp" placeholder="John@Appleseed.com" required>
+                                <label for="emailsignin"> Email Address</label>
+                                <input type="email" class="form-control" id="emailsignin" aria-describedby="emailHelp" placeholder="John@Appleseed.com" name="emailsignin" required>
                             </div>
                             <div class="form-group col-md-12">
                                 <label for="passwordsignin">Password:</label>
-                                <input type="password" class="form-control" id="passwordsignin" placeholder="Password" required>
+                                <input type="password" class="form-control" id="passwordsignin" placeholder="Password" required name="passwordsignin">
                             </div>
                             <div class="form-group col-md-7">
                                 <label for="cardnumber">Card Number:</label>
-                                <input type="text" class="form-control" id="cardnumber" placeholder="#### #### #### ####" required>
+                                <input type="text" class="form-control" id="cardnumber" placeholder="#### #### #### ####" name="cardnumber" required>
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="cardSecurityCode">Security Code:</label>
-                                <input type="text" class="form-control" id="cardSecurityCode" required>
+                                <input type="text" class="form-control" id="cardSecurityCode" name="cardSecurityCode" required>
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="cardmonth">Expiration Date:</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control col-md-4" id="cardmonth" placeholder="MM" required>
-                                    <input type="text" class="form-control col-md-4" id="cardyear" placeholder="YYYY" required>
+                                    <input type="text" class="form-control col-md-4" id="cardmonth" placeholder="MM" name="cardmonth" required>
+                                    <input type="text" class="form-control col-md-4" id="cardyear" placeholder="YYYY" name="cardyear" required>
                                 </div>
                             </div>
                             <div class="form-check col-md-12 pl-4 pb-2">
-                                <input type="checkbox" class="form-check-input" id="checkagreement" required>
+                                <input type="checkbox" class="form-check-input" id="checkagreement" name="checkagreement" required>
                                 <label class="form-check-label" for="checkagreement">I agree to the Terms of Service</label>
                             </div>
                         </div>
