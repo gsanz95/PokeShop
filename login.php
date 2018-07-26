@@ -1,5 +1,14 @@
 <?php
 
+// Maintain session variables
+session_start();
+
+// User is already signed in, so redirect to account page
+if(isset($_SESSION['email'])){
+    header("Location:account.php");
+}
+
+// User wants to login
 if (isset($_POST['login'])) {
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		// MySQL credentials
@@ -30,7 +39,7 @@ if (isset($_POST['login'])) {
 		// If result matched $email and $password, table row must be 1 row
 		if($count == 1) {
 		    // Store the email for use across webpages
-		    $_SESSION['login_email'] = $email;
+		    $_SESSION['email'] = $email;
 
 		    // Redirect to account page
 		    header("Location: account.php");
@@ -40,6 +49,7 @@ if (isset($_POST['login'])) {
 	}
 }
 
+// User wants to register
 if (isset($_POST['register'])) {
         header("Location:createaccount.php");
 }
