@@ -71,7 +71,7 @@ session_start();
             <div class="col-lg-10 h-100 col-sm-9 col-12">
                 <div id="page-header" class="alert-heading">
                     <h1 class="text-center font-weight-bold" aria-label="Welcome to the PokeShop!">Your Account</h1>
-                    <p align="center">Account: <?php echo $_SESSION['email']; ?></p>
+		    <p align="center">Email: <?php echo $_SESSION['email']; ?></p>
 		    <a href="logout.php" style="margin:auto; text-align:center; display:block;" class="button large hpbottom">Logout</a>
 		</div>
                 <div class="h-auto">

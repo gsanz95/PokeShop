@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/sheet.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="PokeShop">
+    <meta name="author" content="Giancarlo Sanz">
+    <title>PokéShop - Cart</title>
+</head>
+<body>
+<div id="wrapper">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <!-- Sidebar -->
+            <div class="col-lg-2 h-100 col-sm-3 col-12">
+                <nav id="myScrollspy" class="sidebar sidebar-nav">
+                    <img class="img-fluid" src="./media/pokeshop.png" alt="Pokémart Logo" width="325" height="auto">
+                    <a class="active" href="./home.php">Home</a>
+                    <a href="#products">Products</a>
+                    <a data-toggle="modal" href="#loginModal">Account</a>
+                    <a href="#about">About Us</a>
+                    <div class="search-container">
+                        <form action="#doSearch"></form>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="text-white text-center">
+                        <p><i class="far fa-copyright"></i> 2017 Wonder Rangers</p>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" tabindex="-1" id="loginModal" role="dialog" aria-labelledby="loginModalCenter" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">Sign In</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="text-white">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#login">
+                                <div class="form-group">
+                                    <label for="username" class="col-form-label">Username:</label>
+                                    <input type="text" class="form-control" id="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-form-label">Password:</label>
+                                    <input type="text" class="form-control" id="password">
+                                    <a href="#forgotpassword" role="link"><span class="point">Forgot Password?</span></a>
+                                </div>
+                                <a href="./createaccount.html" role="link"><span class="point">Create Account</span></a>
+                                <button type="submit" class="btn btn-primary float-right">Login</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Content -->
+            <div class="col-lg-10 h-100 col-sm-9 col-12">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="img-fluid p-5 col">
+                            <img src="./images/pokemon%20pngs/charmanderFull.png" height="600" width="600" class="img-fluid">
+                        </div>
+                        <div class="col px-4 pt-5">
+                            <h2 class="font-weight-bold" aria-label="Product Name">Product Name</h2>
+                            <h5>Types: </h5><a>Fire, Something else</a>
+                            <br><br>
+                            <h6>Pokemon Description:</h6>
+                            <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit id illo neque quam reiciendis, rerum ut vero? Eius minus praesentium reprehenderit. Aperiam asperiores aut autem commodi, ducimus fuga laudantium magnam mollitia necessitatibus, nemo numquam possimus praesentium repellat sed similique! Ab aliquam consectetur cum cumque cupiditate eos expedita fugit id illum inventore laborum magni nihil non qui ratione, repellendus ullam veritatis.</p>
+                            <form method="post" action="#addToCart">
+                                <div class="form-inline justify-content-end my-2">
+                                    <label class="" for="itemQuantity"><h5>Qty: </h5></label>
+                                    <select class="custom-select" name="itemQuantity" id="itemQuantity">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                    </select>
+                                </div>
+                                <button type="submit" id="btnCheckout" class="btn btn-info btn-block"><i class="fas fa-plus"></i> Add To Cart</button>
+                            </form>
+                            <h4 class="text-right">Price: <span class="text-danger">$999.00</span></h4>
+                            <h5 class="text-right">Estimated Delivery Date: MM/DD/YYYY</h5>
+                        </div>
+                    </div>
+                    <div class="card-deck">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="./images/pokemon%20pngs/pikachuThumb.png" class="card-img-top img-fluid">
+                                <a href="#producturl"><h5 class="text-center card-title">Product Name</h5></a>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, omnis.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+
+                        </div>
+                        <div class="card">
+
+                        </div>
+                        <div class="card">
+
+                        </div>
+                        <div class="card">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/functionality.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,11 +1,5 @@
 <?php
 session_start();
-
-// Login user
-if (isset($_POST['login'])) {
-   // 
-}
-
 ?>
 
 
@@ -84,28 +78,28 @@ if (isset($_POST['login'])) {
                             <h2>Featured Items</h2>
                             <div class="card-deck p-4">
                                 <div class="card bg-light text-center">
-                                    <img src="media/earth.jpg" class="card-img-top" alt="Product Img.">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quae.</p>
+                                    <img src="images/ArticunoThumb.png" class="card-img-top" alt="Product Img.">
+                                    <a href="viewproduct.php" name="Articuno">Articuno</a>
                                 </div>
 
                                 <div class="card bg-light text-center">
-                                    <img src="media/earth.jpg" class="card-img-top" alt="Product Img.">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quae.</p>
+                                    <img src="images/ZapdosThumb.png" class="card-img-top" alt="Product Img.">
+				    <a href="viewproduct.php" name="Zapdos">Zapdos</a>
                                 </div>
 
                                 <div class="card bg-light text-center">
-                                    <img src="media/earth.jpg" class="card-img-top" alt="Product Img.">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quae.</p>
+                                    <img src="images/PidgeottoThumb.png" class="card-img-top" alt="Product Img.">
+				    <a href="viewproduct.php" name="Pidgeotto">Pidgeotto</a>
                                 </div>
 
                                 <div class="card bg-light text-center">
-                                    <img src="media/earth.jpg" class="card-img-top" alt="Product Img.">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quae.</p>
+                                    <img src="images/SnorlaxThumb.png" class="card-img-top" alt="Product Img.">
+				    <a href="viewproduct.php" name="Snorlax">Snorlax</a>
                                 </div>
 
                                 <div class="card bg-light text-center">
-                                    <img src="media/earth.jpg" class="card-img-top" alt="Product Img.">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quae.</p>
+                                    <img src="images/CharizardThumb.png" class="card-img-top" alt="Product Img.">
+				    <a href="viewproduct.php" name="Charizard">Charizard</a>
                                 </div>
                             </div>
                             <nav aria-label="Page Navigation">
@@ -123,28 +117,24 @@ if (isset($_POST['login'])) {
                             <h2>Most Popular</h2>
                             <div class="card-deck p-4">
                                 <div class="card bg-light text-center">
-                                    <img src="media/earth.jpg" class="card-img-top" alt="Product Img.">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quae.</p>
+                                    <img src="images/CharizardThumb.png" class="card-img-top" alt="Product Img.">
+				    <a href="viewproduct.php" name="Charizard">Charizard</a>
                                 </div>
-
                                 <div class="card bg-light text-center">
-                                    <img src="media/earth.jpg" class="card-img-top" alt="Product Img.">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quae.</p>
+                                    <img src="images/BlastoiseThumb.png" class="card-img-top" alt="Product Img.">
+				    <a href="viewproduct.php" name="Blastoise">Blastoise</a>
                                 </div>
-
                                 <div class="card bg-light text-center">
-                                    <img src="media/earth.jpg" class="card-img-top" alt="Product Img.">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quae.</p>
+                                    <img src="images/LaprasThumb.png" class="card-img-top" alt="Product Img.">
+				    <a href="viewproduct.php" name="Lapras">Lapras</a>
                                 </div>
-
                                 <div class="card bg-light text-center">
-                                    <img src="media/earth.jpg" class="card-img-top" alt="Product Img.">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quae.</p>
+                                    <img src="images/GyaradosThumb.png" class="card-img-top" alt="Product Img.">
+				    <a href="viewproduct.php" name="Gyarados">Gyarados</a>
                                 </div>
-
                                 <div class="card bg-light text-center">
-                                    <img src="media/earth.jpg" class="card-img-top" alt="Product Img.">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, quae.</p>
+                                    <img src="images/DratiniThumb.png" class="card-img-top" alt="Product Img.">
+				    <a href="viewproduct.php" name="Dratini">Dratini</a>
                                 </div>
                             </div>
                             <nav aria-label="Page Navigation">
@@ -157,7 +147,7 @@ if (isset($_POST['login'])) {
                                 </ul>
                             </nav>
                         </div>
-                        <!-- Deals -->
+                        <!-- Deals
                         <div class="h-auto">
                             <h2>Current Deals</h2>
                             <div class="card-deck p-4">
@@ -195,6 +185,7 @@ if (isset($_POST['login'])) {
                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                                 </ul>
                             </nav>
+			    -->
                         </div>
                     </div>
                 </div>
