@@ -20,9 +20,9 @@
                 <nav id="myScrollspy" class="sidebar sidebar-nav">
                     <img class="img-fluid" src="./media/pokeshop.png" alt="Pokémart Logo" width="325" height="auto">
                     <a class="active" href="./home.php">Home</a>
-                    <a href="#products">Products</a>
-                    <a data-toggle="modal" href="#loginModal">Account</a>
-                    <a href="#about">About Us</a>
+                    <a href="products.php">Products</a>
+                    <a href="login.php">Account</a>
+                    <a href="about.php">About Us</a>
                     <div class="search-container">
                         <form action="#doSearch"></form>
                     </div>
@@ -43,7 +43,7 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="text-white">&times;</span></button>
                         </div>
                         <div class="modal-body">
-                            <form action="#login">
+                            <form action="login.php">
                                 <div class="form-group">
                                     <label for="username" class="col-form-label">Username:</label>
                                     <input type="text" class="form-control" id="username">
@@ -53,7 +53,7 @@
                                     <input type="text" class="form-control" id="password">
                                     <a href="#forgotpassword" role="link"><span class="point">Forgot Password?</span></a>
                                 </div>
-                                <a href="./createaccount.html" role="link"><span class="point">Create Account</span></a>
+                                <a href="createaccount.php" role="link"><span class="point">Create Account</span></a>
                                 <button type="submit" class="btn btn-primary float-right">Login</button>
                             </form>
                         </div>
