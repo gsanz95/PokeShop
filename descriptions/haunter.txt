@@ -1,0 +1,15 @@
+Haunter is a dangerous Pokémon. If one beckons you while floating in darkness, you must never approach it. This Pokémon will try to lick you with its tongue and steal your life away.
+
+Height: 5' 03"
+
+Weight: 0.2 lbs
+
+Gender: male/female
+
+Category: Gas
+
+Abilities: Levitate
+
+Type: Ghost, Poison
+
+Weaknesses: Dark, Ghost, Psychic

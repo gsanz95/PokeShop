@@ -1,0 +1,15 @@
+Persian has six bold whiskers that give it a look of toughness. The whiskers sense air movements to determine what is in the Pokémon's surrounding vicinity. It becomes docile if grabbed by the whiskers.
+
+Height: 3' 03"
+
+Weight: 70.5 lbs
+
+Gender: male/female
+
+Category: Classy Cat
+
+Abilities: Technician, Limber
+
+Type: Normal
+
+Weaknesses: Fighting

@@ -1,9 +1,4 @@
-<?php
-session_start();
-?>
-
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -14,7 +9,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="PokeShop">
     <meta name="author" content="Giancarlo Sanz">
-    <title>PokéShop - My Account</title>
+    <title>PokéShop - Cart</title>
 </head>
 <body>
 <div id="wrapper">
@@ -24,10 +19,10 @@ session_start();
             <div class="col-lg-2 h-100 col-sm-3 col-12">
                 <nav id="myScrollspy" class="sidebar sidebar-nav">
                     <img class="img-fluid" src="./media/pokeshop.png" alt="Pokémart Logo" width="325" height="auto">
-					<form action="#doSearch" method='get' class='form-inline'>
-						<input type='search' class='form-control ml-1' placeholder='Search...' id='searchItem' name='searchItem'>
-						<button class="btn btn-primary mx-1" type="submit">Search</button>
-					</form>
+                    <form action="#doSearch" method='get' class='form-inline'>
+                        <input type='search' class='form-control ml-1' placeholder='Search...' id='searchItem' name='searchItem'>
+                        <button class="btn btn-primary mx-1" type="submit">Search</button>
+                    </form>
                     <a class="active" href="./home.php">Home</a>
                     <a href="products.php">Products</a>
                     <a href="login.php">Account</a>
@@ -39,8 +34,8 @@ session_start();
                     </div>
                 </nav>
             </div>
-	    
-	    <!-- Modal -->
+
+            <!-- Modal -->
             <div class="modal fade" tabindex="-1" id="loginModal" role="dialog" aria-labelledby="loginModalCenter" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -49,18 +44,18 @@ session_start();
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="text-white">&times;</span></button>
                         </div>
                         <div class="modal-body">
-                            <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                            <form action="#login">
                                 <div class="form-group">
-                                    <label for="email" class="col-form-label">Username:</label>
-                                     <input type="text" class="form-control" id="email" name="email">
+                                    <label for="username" class="col-form-label">Username:</label>
+                                    <input type="text" class="form-control" id="username">
                                 </div>
                                 <div class="form-group">
                                     <label for="password" class="col-form-label">Password:</label>
-                                    <input type="text" class="form-control" id="password" name="password">
+                                    <input type="text" class="form-control" id="password">
                                     <a href="#forgotpassword" role="link"><span class="point">Forgot Password?</span></a>
                                 </div>
-                                <a href="./createaccount.php" role="link"><span class="point">Create Account</span></a>
-                                <button name="login" type="submit" class="btn btn-primary float-right">Login</button>
+                                <a href="./createaccount.html" role="link"><span class="point">Create Account</span></a>
+                                <button type="submit" class="btn btn-primary float-right">Login</button>
                             </form>
                         </div>
 
@@ -70,22 +65,48 @@ session_start();
 
             <!-- Page Content -->
             <div class="col-lg-10 h-100 col-sm-9 col-12">
-		<div class='position-absolute' style='z-index:1200; @include float-right;'>
-                <a class='btn btn-primary' id='cartButton' href='./cart.php'><i class='fas fa-shopping-cart'></i></a>
-            </div>
                 <div id="page-header" class="alert-heading">
-                    <h1 class="text-center font-weight-bold" aria-label="Welcome to the PokeShop!">Your Account</h1>
-		    <p align="center">Email: <?php echo $_SESSION['email']; ?></p>
-		    <a href="logout.php" style="margin:auto; text-align:center; display:block;" class="button large hpbottom">Logout</a>
-		</div>
-                <div class="h-auto">
-
+                    <h2 class="font-weight-bold pl-5 pt-5" aria-label="Your Cart">Your Cart</h2>
                 </div>
+                <div class="h-auto list-group" id="itemList">
+                    <!-- Item -->
+                    <div id="item1" class="card w-100 container-fluid">
+                        <div class="row">
+                            <div class="card-body col-md-8">
+                                <img src="./images/CharmanderThumb.png" class="float-left" height="200">
+                                <h5 class="card-title">Charmander</h5>
+				<p>Category: Lizard</p> Abilities: Blaze</p>
+				<p>Type: Fire</p>
+                            </div>
+                            <div class="card-body col-md-4">
+                                <p>Price: $40.00<br>Qty: 2</p>
+                                <button type="button" class="btn btn-danger" id="btnRemove1" onclick="removeItem(this)"><i class="fas fa-trash"></i> Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 
+                    <div id="item2" class="card w-100 container-fluid">
+                        <div class="row">
+                            <div class="card-body col-md-8">
+                                <img src="media/pokeball.png" class="float-left" height="200">
+                                <h5 class="card-title">Item 2</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, magni.</p>
+                            </div>
+                            <div class="card-body col-md-4">
+                                <p>Price: <br>Qty:</p>
+                                <button type="button" class="btn btn-danger" id="btnRemove2" onclick="removeItem(this)"><i class="fas fa-trash"></i> Remove</button>
+                            </div>
+                        </div>
+                    </div>
+	            -->
+                </div>
+                <button type="button" id="btnCheckout" class="btn btn-primary btn-lg float-right" onclick="checkout()"><i class="fas fa-shopping-cart"></i> Checkout</button>
             </div>
         </div>
     </div>
 </div>
 
+<script src="js/functionality.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="js/bootstrap.js"></script>

@@ -69,10 +69,10 @@ session_start();
                 </div>
 
                 <!-- Page Content -->
-		    <div class='position-absolute' style='z-index:1200; @include float-right;'>
-                <a class='btn btn-primary' id='cartButton' href='./cart.html'><i class='fas fa-shopping-cart'></i></a>
-            </div>
                 <div class="col-lg-10 h-100 col-sm-9 col-12">
+		    <div class='position-absolute' style='z-index:1200; @include float-right;'>
+                <a class='btn btn-primary' id='cartButton' href='./cart.php'><i class='fas fa-shopping-cart'></i></a>
+            </div>
                     <div id="page-header" class="alert-heading">
                         <h1 class="text-center font-weight-bold" aria-label="Welcome to the PokeShop!">Welcome to the PokeShop!</h1>
                     </div>
@@ -83,29 +83,30 @@ session_start();
                             <div class="card-deck p-4">
                                 <div class="card bg-light text-center">
                                     <img src="images/ArticunoThumb.png" class="card-img-top" alt="Product Img.">
-                                    <a href="viewproduct.php" name="Articuno">Articuno</a>
+                                    <a href="viewproduct.php" name="Articuno">Articuno ($20.00)</a>
                                 </div>
 
                                 <div class="card bg-light text-center">
                                     <img src="images/ZapdosThumb.png" class="card-img-top" alt="Product Img.">
-				    <a href="viewproduct.php" name="Zapdos">Zapdos</a>
+				    <a href="viewproduct.php" name="Zapdos">Zapdos ($20.00)</a>
                                 </div>
 
                                 <div class="card bg-light text-center">
                                     <img src="images/PidgeottoThumb.png" class="card-img-top" alt="Product Img.">
-				    <a href="viewproduct.php" name="Pidgeotto">Pidgeotto</a>
+				    <a href="viewproduct.php" name="Pidgeotto">Pidgeotto ($20.00)</a>
                                 </div>
 
                                 <div class="card bg-light text-center">
                                     <img src="images/SnorlaxThumb.png" class="card-img-top" alt="Product Img.">
-				    <a href="viewproduct.php" name="Snorlax">Snorlax</a>
+				    <a href="viewproduct.php" name="Snorlax">Snorlax ($20.00)</a>
                                 </div>
 
                                 <div class="card bg-light text-center">
                                     <img src="images/CharizardThumb.png" class="card-img-top" alt="Product Img.">
-				    <a href="viewproduct.php" name="Charizard">Charizard</a>
+				    <a href="viewproduct.php" name="Charizard">Charizard ($20.00)</a>
                                 </div>
                             </div>
+			    <!--
                             <nav aria-label="Page Navigation">
                                 <ul class="pagination justify-content-center">
                                     <li class="page-item active">
@@ -115,32 +116,34 @@ session_start();
                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                                 </ul>
                             </nav>
+			    -->
                         </div>
                         <!-- Popular -->
                         <div class="h-auto">
                             <h2>Most Popular</h2>
                             <div class="card-deck p-4">
                                 <div class="card bg-light text-center">
-                                    <img src="images/CharizardThumb.png" class="card-img-top" alt="Product Img.">
-				    <a href="viewproduct.php" name="Charizard">Charizard</a>
+                                    <img src="images/CharmanderThumb.png" class="card-img-top" alt="Product Img.">
+				    <a href="viewproduct.php" name="Charmander">Charmander ($20.00)</a>
                                 </div>
                                 <div class="card bg-light text-center">
                                     <img src="images/BlastoiseThumb.png" class="card-img-top" alt="Product Img.">
-				    <a href="viewproduct.php" name="Blastoise">Blastoise</a>
+				    <a href="viewproduct.php" name="Blastoise">Blastoise ($20.00)</a>
                                 </div>
                                 <div class="card bg-light text-center">
                                     <img src="images/LaprasThumb.png" class="card-img-top" alt="Product Img.">
-				    <a href="viewproduct.php" name="Lapras">Lapras</a>
+				    <a href="viewproduct.php" name="Lapras">Lapras ($20.00)</a>
                                 </div>
                                 <div class="card bg-light text-center">
                                     <img src="images/GyaradosThumb.png" class="card-img-top" alt="Product Img.">
-				    <a href="viewproduct.php" name="Gyarados">Gyarados</a>
+				    <a href="viewproduct.php" name="Gyarados">Gyarados ($20.00)</a>
                                 </div>
                                 <div class="card bg-light text-center">
                                     <img src="images/DratiniThumb.png" class="card-img-top" alt="Product Img.">
-				    <a href="viewproduct.php" name="Dratini">Dratini</a>
+				    <a href="viewproduct.php" name="Dratini">Dratini ($20.00)</a>
                                 </div>
                             </div>
+			    <!--
                             <nav aria-label="Page Navigation">
                                 <ul class="pagination justify-content-center">
                                     <li class="page-item active">
@@ -150,6 +153,7 @@ session_start();
                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
                                 </ul>
                             </nav>
+			    -->
                         </div>
                         <!-- Deals
                         <div class="h-auto">

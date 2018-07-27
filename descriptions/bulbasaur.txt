@@ -1,0 +1,15 @@
+Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
+
+Height: 2' 04"
+
+Weight: 15.2 lbs
+
+Gender: male/female
+
+Category: Seed
+
+Abilities: Overgrow
+
+Type: Grass, Poison
+
+Weaknesses: Fire, Flying, Ice, Psychic

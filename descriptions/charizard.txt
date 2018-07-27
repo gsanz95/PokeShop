@@ -1,0 +1,15 @@
+Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.
+
+Height: 5' 07"
+
+Weight: 199.5 lbs
+
+Gender: male/female
+
+Category: Flame
+
+Abilities: Blaze
+
+Type: Fire, Flying
+
+Weaknesses: Rock, Electric, Water

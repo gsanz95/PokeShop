@@ -1,0 +1,15 @@
+Scyther is blindingly fast. Its blazing speed enhances the effectiveness of the twin scythes on its forearms. This Pokémon's scythes are so effective, they can slice through thick logs in one wicked stroke.
+
+Height: 4' 11"
+
+Weight: 123.5 lbs
+
+Gender: male/female
+
+Category: Mantis
+
+Abilities: Swarm, Technician
+
+Type: Bug, Flying
+
+Weaknesses: Rock, Electric, Fire, Flying, Ice

@@ -1,3 +1,9 @@
+<?php
+if (isset($_POST['checkout'])) {
+    // do something for checkout
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +43,7 @@
 	    
 	    <!-- Modal -->
 		<div class='position-absolute' style='z-index:1200; @include float-right;'>
-                <a class='btn btn-primary' id='cartButton' href='./cart.html'><i class='fas fa-shopping-cart'></i></a>
+                <a class='btn btn-primary' id='cartButton' href='./cart.php'><i class='fas fa-shopping-cart'></i></a>
             </div>
             <div class="modal fade" tabindex="-1" id="loginModal" role="dialog" aria-labelledby="loginModalCenter" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -79,7 +85,7 @@
 	    <div class="col-lg-10 h-100 col-sm-9 col-12">
 	        <div id="page-header" class="alert-heading">
                     <h1 class="text-center font-weight-bold" aria-label="Welcome to the PokeShop!">The Pokemon are waiting for you below!</h1>
-		    <img class="center" width=400px height=400px src="./media/third.png">
+		    <img class="center" width=400px height=400px src="./media/pokeball.png">
     	        </div>
             </div>
 

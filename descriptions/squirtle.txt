@@ -1,0 +1,15 @@
+Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds.
+
+Height: 1' 08"
+
+Weight: 19.8 lbs
+
+Gender: male/female
+
+Category: Tiny Turtle
+
+Abilities: Torrent
+
+Type: Water
+
+Weaknesses: Electric, Grass

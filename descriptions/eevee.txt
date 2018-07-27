@@ -1,0 +1,15 @@
+Eevee has an unstable genetic makeup that suddenly mutates due to the environment in which it lives. Radiation from various stones causes this Pokémon to evolve.
+
+Height: 1' 00"
+
+Weight: 14.3 lbs
+
+Gender: male/female
+
+Category: Evolution
+
+Abilities: Run Away, Adaptability
+
+Type: Normal
+
+Weaknesses: Fighting
