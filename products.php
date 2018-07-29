@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "sidebar.php";
 include "cartbutton.php";
 if (isset($_POST['checkout'])) {
@@ -17,7 +16,7 @@ if (isset($_POST['checkout'])) {
 <?php
 //Include Database Config
 include "config.php";
-
+include "functions.php";
 //Query all pokemon
 $products_query = "SELECT * FROM products";
 $products_arr = mysqli_query($conn, $products_query);
@@ -35,6 +34,7 @@ foreach ($products_arr as $pokemon){
     }
 
     $pokemon[1] = ucwords($pokemon[1]);
+    $pokemon[2] = tokenTruncate($pokemon[2],50) . "...";
 
     echo "<!-- Item Row must always have 5+ cards-->
             <div class='card'>
