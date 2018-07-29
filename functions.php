@@ -126,6 +126,12 @@ function evalContents($e){
     }
     return $nr;
 }
+
+// Cutoff description point
+function tokenTruncate($string, $width) {
+    $string = substr($string, 0, strrpos(substr($string, 0, $width), ' '));
+    return $string;
+}
 /**
  * Created by PhpStorm.
  * User: Giancarlo
