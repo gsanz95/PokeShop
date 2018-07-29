@@ -1,152 +1,139 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/sheet.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="PokeShop">
-    <meta name="author" content="Giancarlo Sanz">
-    <title>PokéShop - Cart</title>
-</head>
-<body>
-<div id="wrapper">
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <!-- Sidebar -->
-            <div class="col-lg-2 h-100 col-sm-3 col-12">
-                <nav id="myScrollspy" class="sidebar sidebar-nav">
-                    <img class="img-fluid" src="./media/pokeshop.png" alt="Pokémart Logo" width="325" height="auto">
-                    <a class="active" href="./home.php">Home</a>
-                    <a href="products.php">Products</a>
-                    <a href="login.php">Account</a>
-                    <a href="about.php">About Us</a>
-                    <div class="search-container">
-                        <form action="#doSearch"></form>
-                    </div>
+<?php
+session_start();
+include "sidebar.php";
+include "cartbutton.php";
+?>
 
-                    <!-- Footer -->
-                    <div class="text-white text-center">
-                        <p><i class="far fa-copyright"></i> 2017 Wonder Rangers</p>
-                    </div>
-                </nav>
-            </div>
+<!-- Page Content -->
+<div class='col-lg-10 h-100 col-sm-9 col-12'>
+    <div class='container-fluid'>
+        <div class='row'>
 
-            <!-- Modal -->
-            <div class="modal fade" tabindex="-1" id="loginModal" role="dialog" aria-labelledby="loginModalCenter" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="modalTitle">Sign In</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="text-white">&times;</span></button>
-                        </div>
-                        <div class="modal-body">
-                            <form action="login.php">
-                                <div class="form-group">
-                                    <label for="username" class="col-form-label">Username:</label>
-                                    <input type="text" class="form-control" id="username">
-                                </div>
-                                <div class="form-group">
-                                    <label for="password" class="col-form-label">Password:</label>
-                                    <input type="text" class="form-control" id="password">
-                                    <a href="#forgotpassword" role="link"><span class="point">Forgot Password?</span></a>
-                                </div>
-                                <a href="createaccount.php" role="link"><span class="point">Create Account</span></a>
-                                <button type="submit" class="btn btn-primary float-right">Login</button>
-                            </form>
-                        </div>
+<?php
+// Database Config
+include "config.php";
 
-                    </div>
+//Query all pokemon
+$pokemon_query = "SELECT * FROM products WHERE p_id='" . $_GET['p_id'] . "'";
+$pokemon_arr = mysqli_query($conn, $pokemon_query);
+$pokemon = mysqli_fetch_array($pokemon_arr,MYSQLI_NUM);
+
+//Query Related Products
+$related_query = "SELECT * FROM products WHERE INSTR(p_type, '" . strtok($pokemon[10],"\n\t,") . "') > 0";
+$related_obj = mysqli_query($conn,$related_query);
+$related_arr = $related_obj->fetch_all(MYSQLI_NUM);
+
+
+// Uppercase necessary words
+$pokemon[1] = ucwords($pokemon[1]);
+$pokemon[10] = ucwords($pokemon[10]);
+$pokemon[7] = ucwords($pokemon[7]);
+$pokemon[8] = ucwords($pokemon[8]);
+$pokemon[9] = ucwords($pokemon[9]);
+$pokemon[11] = ucwords($pokemon[11]);
+
+// Print page content
+echo "  <div class='img-fluid p-5 col'>                    
+            <img src='./images/$pokemon[1]full.png' height='600' width='600' class='img-fluid'>
+        </div>
+        <div class='col px-4 pt-5'>
+            <h2 class='font-weight-bold' aria-label='Product Name'>$pokemon[1]</h2>
+            <h5>Types: </h5><a>$pokemon[10]</a><br><br>
+            <h6>Pokemon Description:</h6>
+            <p class='my-3'>$pokemon[2]</p>
+    
+            <p><span class='h6'>Height: </span>$pokemon[3]'&nbsp;$pokemon[4]\"</p>
+    
+            <p><span class='h6'>Weight: </span> $pokemon[5]lbs</p>";
+
+// TO-DO If there are both genders make the customer choose
+if($pokemon[6] == 'b'){
+    echo "<p><span class='h6'>Gender: </span>Male & Female";
+}elseif($pokemon[6] == 'm'){
+    echo "<p><span class='h6'>Gender: </span>Male</p>";
+}elseif($pokemon[6] == 'f'){
+    echo "<p><span class='h6'>Gender: </span>Female</p>";
+}
+
+    
+echo     "<p><span class='h6'>Category: </span>$pokemon[7]</p>";
+
+if($pokemon[8] === null) {
+    echo "<p><span class='h6'>Abilities: </span>$pokemon[8]</p>";
+}
+
+if($pokemon[9] != 'NULL') {
+    echo "<p><span class='h6'>Intimidate: </span>$pokemon[9]</p>";
+}
+    
+echo        "<p><span class='h6'>Weakness: </span>$pokemon[11]</p>
+            <form method='post' action='cart.php'>
+                <div class='form-inline justify-content-end my-2'>
+                    <label class='' for='itemQuantity'><h5>Qty: </h5></label>
+                    <select class='custom-select' name='itemQuantity' id='itemQuantity'>
+                        <option value='1'>1</option>
+                        <option value='2'>2</option>
+                        <option value='3'>3</option>
+                        <option value='4'>4</option>
+                        <option value='5'>5</option>
+                        <option value='6'>6</option>
+                        <option value='7'>7</option>
+                        <option value='8'>8</option>
+                        <option value='9'>9</option>
+                        <option value='10'>10</option>
+                        <option value='11'>11</option>
+                    </select>
                 </div>
-            </div>
-
-            <!-- Page Content -->
-            <div class="col-lg-10 h-100 col-sm-9 col-12">
-            <div class='position-absolute' style='z-index:1200; @include float-right;'>
-                <a class='btn btn-primary' id='cartButton' href='./cart.php'><i class='fas fa-shopping-cart'></i></a>
-            </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="img-fluid p-5 col">
-                            <img src="./images/pokemon%20pngs/charmanderFull.png" height="600" width="600" class="img-fluid">
-                        </div>
-                        <div class="col px-4 pt-5">
-                            <h2 class="font-weight-bold" aria-label="Product Name">Charmander</h2>
-                            <h5>Types: </h5><a>Fire</a>
-                            <br><br>
-                            <h6>Pokemon Description:</h6>
-                            <p class="my-3">The flame that burns at the tip of its tail is an indication of its emotions. The flame wavers when Charmander is enjoying itself. If the Pokemon becomes enraged, the flame burns fiercely.</p>
-
-<p>Height: 2' 00"</p>
-
-<p>Weight: 18.7 lbs</p>
-
-<p>Gender: male/female</p>
-
-<p>Category: Lizard</p>
-
-<p>Abilities: Blaze</p>
-
-<p>Type: Fire</p>
-
-<p>Weaknesses: Ground, Rock, Water</p>
-                            <form method="post" action="cart.php">
-                                <div class="form-inline justify-content-end my-2">
-                                    <label class="" for="itemQuantity"><h5>Qty: </h5></label>
-                                    <select class="custom-select" name="itemQuantity" id="itemQuantity">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                    </select>
-                                </div>
-                                <button type="submit" id="btnCheckout" class="btn btn-info btn-block"><i class="fas fa-plus"></i> Add To Cart</button>
-                            </form>
-                            <h4 class="text-right">Price: <span class="text-danger">$20.00</span></h4>
-                            <h5 class="text-right">Estimated Delivery Date: 07/27/2018</h5>
-                        </div>
-                    </div>
-		    <!--
-                    <div class="card-deck">
-                        <div class="card">
-                            <div class="card-body">
-                                <img src="./images/pokemon%20pngs/pikachuThumb.png" class="card-img-top img-fluid">
-                                <a href="#producturl"><h5 class="text-center card-title">Product Name</h5></a>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, omnis.</p>
-                            </div>
-                        </div>
-                        <div class="card">
-
-                        </div>
-                        <div class="card">
-
-                        </div>
-                        <div class="card">
-
-                        </div>
-                        <div class="card">
-
-                        </div>
-                    </div>
-		    -->
-                </div>
+                <button type='submit' id='btnCheckout' class='btn btn-info btn-block'><i class='fas fa-plus'></i> Add To Cart</button>
+            </form>
+            <h4 class='text-right'>Price: <span class='text-danger'>\$$pokemon[12]</span></h4>
+            <h5 class='text-right'>Estimated Delivery Date: <span class='text-danger'>Coming Soon!</span></h5>
             </div>
         </div>
-    </div>
-</div>
+        
+        <div class='container-fluid m-0 p-0'>
+            <h4>Related Pokemon</h4>
+        </div>";
 
-<script src="js/functionality.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="js/bootstrap.js"></script>
-</body>
-</html>
+//Debug
+//echo $related_query;
+//print_r($related_arr);
+$x = 0;
+foreach ($related_arr as $related){
+    if(($x % 5) == 0){
+        echo "<div class='card-deck container-fluid pb-2'>";
+    }
+
+    $related[1] = ucwords($related[1]);
+
+    echo "<!-- Item Row must always have 5+ cards-->
+            <div class='card'>
+                <img class='card-img-top img-fluid' src='./images/$related[1]thumb.png' width='400'>
+                <div class='card-body'>
+                    <a href='viewproduct.php?p_id=$related[0]'><h5 class='text-center card-title'>$related[1]</h5></a>
+                    <p class='card-text'>$related[2]</p>
+                </div>
+                <div class='card-footer text-center'>
+                    <a type='button' class='btn btn-info' aria-label='View product' href='viewproduct.php?p_id=$related[0]'>View</a>
+                </div>
+          </div>";
+
+    if(($x % 5) == 4)
+    {
+        break;
+    }
+    $x++;
+}
+
+
+for($i = $x;$i < 5; $i++){
+    echo "<div class='card'></div>";
+}
+
+echo "    </div>
+        </div>
+    </div>";
+?>
+<?php
+include "footer.php";
+?>

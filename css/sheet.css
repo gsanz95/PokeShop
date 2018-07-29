@@ -87,3 +87,30 @@ body, html, #wrapper{
     }
 
 }
+
+#container-floating{
+    position: fixed;
+    background: #061d4a;
+    width: 70px;
+    height: 70px;
+    top: 30px;
+    right: 0px;
+    z-index: 1200;
+    cursor: pointer;
+}
+
+#container-floating:hover{
+    background: white;
+
+}
+
+#cartButton{
+    color: white;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+}
+
+#cartButton:hover{
+    color: #061d4a;
+}
