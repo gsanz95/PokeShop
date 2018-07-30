@@ -89,6 +89,7 @@ foreach($di as $name => $fio) {
         $column = strtok( $separator );
     }
 
+    // Store all pokemon info into the database
     $update_query = "update products set p_description='$p_description',p_height_ft='$height[0]',p_height_in='$height[1]',p_weight='$weight',p_gender='$gender',p_category='$category',p_abilities='$abilities',p_intimidate='$intimidate',p_type='$type',p_weakness='$weaknesses' where p_name='$file_name'";
     //Debug
     //echo $update_query, "<br><br>";
