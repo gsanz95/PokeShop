@@ -1,5 +1,4 @@
 <?php
-session_start();
 include "sidebar.php";
 include "cartbutton.php";
 ?>
@@ -12,8 +11,9 @@ include "cartbutton.php";
 <?php
 // Database Config
 include "config.php";
+include "functions.php";
 
-//Query all pokemon
+//Query specific pokemon
 $pokemon_query = "SELECT * FROM products WHERE p_id='" . $_GET['p_id'] . "'";
 $pokemon_arr = mysqli_query($conn, $pokemon_query);
 $pokemon = mysqli_fetch_array($pokemon_arr,MYSQLI_NUM);
@@ -24,7 +24,7 @@ $related_obj = mysqli_query($conn,$related_query);
 $related_arr = $related_obj->fetch_all(MYSQLI_NUM);
 
 
-// Uppercase necessary words
+// Text manipulation
 $pokemon[1] = ucwords($pokemon[1]);
 $pokemon[10] = ucwords($pokemon[10]);
 $pokemon[7] = ucwords($pokemon[7]);
@@ -66,11 +66,11 @@ if($pokemon[9] != 'NULL') {
     echo "<p><span class='h6'>Intimidate: </span>$pokemon[9]</p>";
 }
     
-echo        "<p><span class='h6'>Weakness: </span>$pokemon[11]</p>
-            <form method='post' action='cart.php'>
+echo "<p><span class='h6'>Weakness: </span>$pokemon[11]</p>
+            <form method='get' action='carthandler.php'>
                 <div class='form-inline justify-content-end my-2'>
-                    <label class='' for='itemQuantity'><h5>Qty: </h5></label>
-                    <select class='custom-select' name='itemQuantity' id='itemQuantity'>
+                    <label for='itemQuantity'><h5>Qty: </h5></label>
+                    <select class='custom-select' name='qty' id='qty'>
                         <option value='1'>1</option>
                         <option value='2'>2</option>
                         <option value='3'>3</option>
@@ -84,7 +84,8 @@ echo        "<p><span class='h6'>Weakness: </span>$pokemon[11]</p>
                         <option value='11'>11</option>
                     </select>
                 </div>
-                <button type='submit' id='btnCheckout' class='btn btn-info btn-block'><i class='fas fa-plus'></i> Add To Cart</button>
+                <input type='hidden' id='p_id' name='id' value='$pokemon[0]'>
+                <button type='submit' id='btnAddToCart' class='btn btn-info btn-block'><i class='fas fa-plus'></i> Add To Cart</button>
             </form>
             <h4 class='text-right'>Price: <span class='text-danger'>\$$pokemon[12]</span></h4>
             <h5 class='text-right'>Estimated Delivery Date: <span class='text-danger'>Coming Soon!</span></h5>
@@ -103,8 +104,12 @@ foreach ($related_arr as $related){
     if(($x % 5) == 0){
         echo "<div class='card-deck container-fluid pb-2'>";
     }
+    if($pokemon[0] === $related[0]) {
+        continue;
+    }
 
     $related[1] = ucwords($related[1]);
+    $related[2] = tokenTruncate($related[2],50) . "...";
 
     echo "<!-- Item Row must always have 5+ cards-->
             <div class='card'>
@@ -126,7 +131,7 @@ foreach ($related_arr as $related){
 }
 
 
-for($i = $x;$i < 5; $i++){
+for($i = $x;$i < 4; $i++){
     echo "<div class='card'></div>";
 }
 
