@@ -34,7 +34,7 @@ $pokemon[11] = ucwords($pokemon[11]);
 
 // Print page content
 echo "  <div class='img-fluid p-5 col'>                    
-            <img src='../pokemart/images/$pokemon[1]full.png' height='600' width='600' class='img-fluid'>
+            <img src='./images/$pokemon[1]Full.png' height='600' width='600' class='img-fluid'>
         </div>
         <div class='col px-4 pt-5'>
             <h2 class='font-weight-bold' aria-label='Product Name'>$pokemon[1]</h2>
@@ -113,7 +113,7 @@ foreach ($related_arr as $related){
 
     echo "<!-- Item Row must always have 5+ cards-->
             <div class='card'>
-                <img class='card-img-top img-fluid' src='../pokemart/images/$related[1]thumb.png' width='400'>
+                <img class='card-img-top img-fluid' src='./images/$related[1]Thumb.png' width='400'>
                 <div class='card-body'>
                     <a href='viewproduct.php?p_id=$related[0]'><h5 class='text-center card-title'>$related[1]</h5></a>
                     <p class='card-text'>$related[2]</p>
