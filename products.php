@@ -38,7 +38,7 @@ foreach ($products_arr as $pokemon){
 
     echo "<!-- Item Row must always have 5+ cards-->
             <div class='card'>
-                <img class='card-img-top img-fluid' src='./images/$pokemon[1]thumb.png' width='400'>
+                <img class='card-img-top img-fluid' src='../pokemart/images/$pokemon[1]thumb.png' width='400'>
                 <div class='card-body'>
                     <a href='viewproduct.php?p_id=$pokemon[0]'><h5 class='text-center card-title'>$pokemon[1]</h5></a>
                     <p class='card-text'>$pokemon[2]</p>

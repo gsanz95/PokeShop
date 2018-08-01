@@ -52,7 +52,7 @@ foreach ($featured_items as $item){
     $featured_row[2] = tokenTruncate($featured_row[2],50);
 
     echo "<div class='card bg-light text-center'>
-            <img src='./images/$featured_row[1]thumb.png' class='card-img-top img-fluid' alt='Product Img.' width='400'>
+            <img src='../pokemart/images/$featured_row[1]thumb.png' class='card-img-top img-fluid' alt='Product Img.' width='400'>
             <div class='card-body'>
                 <a href='viewproduct.php?p_id=$featured_row[0]'><h5 class='text-center card-title'>$featured_row[1]</h5></a>
                 <p>$featured_row[2]</p>
@@ -99,7 +99,7 @@ foreach ($popular_items as $item){
     $featured_row[2] = tokenTruncate($featured_row[2],50);
 
     echo "<div class='card bg-light text-center'>
-            <img src='./images/$featured_row[1]thumb.png' class='card-img-top img-fluid' alt='Product Img.' width='400'>
+            <img src='../pokemart/images/$featured_row[1]thumb.png' class='card-img-top img-fluid' alt='Product Img.' width='400'>
             <div class='card-body'>
                 <a href='viewproduct.php?p_id=$featured_row[0]'><h5 class='text-center card-title'>$featured_row[1]</h5></a>
                 <p>$featured_row[2]</p>
@@ -146,7 +146,7 @@ foreach ($deal_items as $item){
     $featured_row[2] = tokenTruncate($featured_row[2],50);
 
     echo "<div class='card bg-light text-center'>
-            <img src='./images/$featured_row[1]thumb.png' class='card-img-top img-fluid' alt='Product Img.' width='400'>
+            <img src='../pokemart/images/$featured_row[1]thumb.png' class='card-img-top img-fluid' alt='Product Img.' width='400'>
             <div class='card-body'>
                 <a href='viewproduct.php?p_id=$featured_row[0]'><h5 class='text-center card-title'>$featured_row[1]</h5></a>
                 <p>$featured_row[2]</p>

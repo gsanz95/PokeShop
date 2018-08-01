@@ -46,20 +46,25 @@ if(isset($_SESSION['cart'])){
         //print_r($item);
         $qty = $_SESSION['cart'][$item[0]]['qty'];
 
-        echo "<!-- Item -->
-            <div id='item' class='card w-100 container-fluid'>
-                <div class='row'>
-                    <div class='card-body col-md-8'>
-                        <img src='./images/$item[1]thumb.png' class='float-left' height='200'>
-                        <h5 class='card-title'>$item[1]</h5>
-                        <p>$item[2]</p>
+        if($qty === 0)
+        {
+            continue;
+        }else {
+            echo "<!-- Item -->
+                <div id='item' class='card w-100 container-fluid'>
+                    <div class='row'>
+                        <div class='card-body col-md-8'>
+                            <img src='../pokemart/images/$item[1]thumb.png' class='float-left' height='200'>
+                            <h5 class='card-title'>$item[1]</h5>
+                            <p>$item[2]</p>
+                        </div>
+                        <div class='card-body col-md-4'>
+                            <p>Price: $item[12]<br>Qty: $qty</p>
+                            <button type='button' class='btn btn-danger' id='btnRemove' onclick='removeItem(this)' value='$item[0]'><i class='fas fa-trash'></i> Remove</button>
+                        </div>
                     </div>
-                    <div class='card-body col-md-4'>
-                        <p>Price: $item[12]<br>Qty: $qty</p>
-                        <button type='button' class='btn btn-danger' id='btnRemove2' onclick='removeItem(this)'><i class='fas fa-trash'></i> Remove</button>
-                    </div>
-                </div>
-            </div>";
+                </div>";
+        }
     }
 
     //Check if logged in
