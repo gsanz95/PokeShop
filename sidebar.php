@@ -22,7 +22,7 @@
                 <div class='col-lg-2 h-100 col-sm-3 col-12'>
                     <nav id='myScrollspy' class='sidebar sidebar-nav'>
                         <img class='img-fluid' src='./media/pokeshop.png' alt='Pokémart Logo' width='325' height='auto'>
-						<form action='#doSearch' method='get' class='form-row m-0 p-0 '>
+						<form action='./searchpage.php' method='get' class='form-row m-0 p-0 '>
                             <div class="col-9">
 							    <input type='search' class='form-control' placeholder='Search...' id='searchItem' name='searchItem'>
                             </div>
