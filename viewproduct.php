@@ -111,6 +111,7 @@ foreach ($related_arr as $related){
 
     $related[1] = ucwords($related[1]);
     $related[2] = tokenTruncate($related[2],50) . "...";
+    $related[2] = utf8_encode($related[2]);
 
     echo "<!-- Item Row must always have 5+ cards-->
             <div class='card'>
