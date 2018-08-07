@@ -12,10 +12,12 @@ function serverRemove(id){
     $.ajax({
         url: "remove.php",
         type: "POST",
-        data: {poke: id},
+        data: {poke: id}
+        //Debug
+        /*,
         success:function(data,status) {
             alert(data);
-        }
+        }*/
         //async: false;
     });
 
