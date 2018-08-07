@@ -45,6 +45,9 @@ if(isset($_SESSION['cart'])){
     foreach ($cart_arr as $item) {
         //print_r($item);
         $qty = $_SESSION['cart'][$item[0]]['qty'];
+	$item[1] = ucwords($item[1]);
+	$price = $item[12] * $qty;
+    	$item[2] = utf8_encode($item[2]);
 
         if($qty === 0)
         {
@@ -54,12 +57,12 @@ if(isset($_SESSION['cart'])){
                 <div id='item' class='card w-100 container-fluid'>
                     <div class='row'>
                         <div class='card-body col-md-8'>
-                            <img src='../pokemart/images/$item[1]thumb.png' class='float-left' height='200'>
+                            <img src='./images/$item[1]Thumb.png' class='float-left' height='200'>
                             <h5 class='card-title'>$item[1]</h5>
                             <p>$item[2]</p>
                         </div>
                         <div class='card-body col-md-4'>
-                            <p>Price: $item[12]<br>Qty: $qty</p>
+                            <p>Price: $price<br>Qty: $qty</p>
                             <button type='button' class='btn btn-danger' id='btnRemove' onclick='removeItem(this)' value='$item[0]'><i class='fas fa-trash'></i> Remove</button>
                         </div>
                     </div>

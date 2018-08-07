@@ -50,6 +50,7 @@ foreach ($featured_items as $item){
     // Text Manipulation
     $featured_row[1] = ucwords($featured_row[1]);
     $featured_row[2] = tokenTruncate($featured_row[2],50);
+    $featured_row[2] = utf8_encode($featured_row[2]);
 
     echo "<div class='card bg-light text-center'>
             <img src='./images/$featured_row[1]Thumb.png' class='card-img-top img-fluid' alt='Product Img.' width='400'>
@@ -97,6 +98,7 @@ foreach ($popular_items as $item){
     // Text Manipulation
     $featured_row[1] = ucwords($featured_row[1]);
     $featured_row[2] = tokenTruncate($featured_row[2],50);
+    $featured_row[2] = utf8_encode($featured_row[2]);
 
     echo "<div class='card bg-light text-center'>
             <img src='./images/$featured_row[1]Thumb.png' class='card-img-top img-fluid' alt='Product Img.' width='400'>
@@ -144,6 +146,7 @@ foreach ($deal_items as $item){
     // Text Manipulation
     $featured_row[1] = ucwords($featured_row[1]);
     $featured_row[2] = tokenTruncate($featured_row[2],50);
+    $featured_row[2] = utf8_encode($featured_row[2]);
 
     echo "<div class='card bg-light text-center'>
             <img src='./images/$featured_row[1]Thumb.png' class='card-img-top img-fluid' alt='Product Img.' width='400'>

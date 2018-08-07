@@ -23,8 +23,9 @@ if(!empty($_GET['searchItem'])){
             echo "<div class='card-deck container-fluid pb-2'>";
         }
 
-        $ite[1] = ucwords($item[1]);
+        $item[1] = ucwords($item[1]);
         $item[2] = tokenTruncate($item[2],50) . "...";
+    	$item[2] = utf8_encode($item[2]);
 
         echo "<!-- Item Row must always have 5+ cards-->
             <div class='card'>

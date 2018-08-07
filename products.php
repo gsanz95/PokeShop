@@ -35,6 +35,7 @@ foreach ($products_arr as $pokemon){
 
     $pokemon[1] = ucwords($pokemon[1]);
     $pokemon[2] = tokenTruncate($pokemon[2],50) . "...";
+    $pokemon[2] = utf8_encode($pokemon[2]);
 
     echo "<!-- Item Row must always have 5+ cards-->
             <div class='card'>

@@ -31,6 +31,7 @@ $pokemon[7] = ucwords($pokemon[7]);
 $pokemon[8] = ucwords($pokemon[8]);
 $pokemon[9] = ucwords($pokemon[9]);
 $pokemon[11] = ucwords($pokemon[11]);
+$pokemon[2] = utf8_encode($pokemon[2]);
 
 // Print page content
 echo "  <div class='img-fluid p-5 col'>                    
