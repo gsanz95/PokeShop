@@ -46,8 +46,9 @@ if(isset($_SESSION['cart'])){
         //print_r($item);
         $qty = $_SESSION['cart'][$item[0]]['qty'];
 	$item[1] = ucwords($item[1]);
-	$price = $item[12] * $qty;
+	$item[12] = $item[12] * $qty;
     	$item[2] = utf8_encode($item[2]);
+	$total = $total + $item[12];
 
         if($qty === 0)
         {
@@ -62,13 +63,16 @@ if(isset($_SESSION['cart'])){
                             <p>$item[2]</p>
                         </div>
                         <div class='card-body col-md-4'>
-                            <p>Price: $price<br>Qty: $qty</p>
+                            <p>Price: $item[12]<br>Qty: $qty</p>
                             <button type='button' class='btn btn-danger' id='btnRemove' onclick='removeItem(this)' value='$item[0]'><i class='fas fa-trash'></i> Remove</button>
                         </div>
                     </div>
                 </div>";
+	    
         }
     }
+    
+    echo "<p align='right' class='h3'>Total Price: $total</p>";
 
     //Check if logged in
     if(isset($_SESSION['email'])){

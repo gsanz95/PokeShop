@@ -8,6 +8,7 @@ include "cartbutton.php";
 <div class='col-lg-10 h-100 col-sm-9 col-12'>
     <div id='page-header' class='alert-heading'>
         <h1 class='text-center font-weight-bold' aria-label='Welcome to the PokeShop!'>Welcome to the PokeShop!</h1>
+    	<p class='text-center font-weight-bold'>The best place to buy your favorite Pokemon!</p>
     </div>
     <div class='h-auto'>
 

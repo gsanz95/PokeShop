@@ -66,7 +66,11 @@ if($pokemon[8] === null) {
 if($pokemon[9] != 'NULL') {
     echo "<p><span class='h6'>Intimidate: </span>$pokemon[9]</p>";
 }
-    
+
+// One-day shipping
+date_default_timezone_set('Australia/Melbourne');
+$date = date('m/d/Y');
+ 
 echo "<p><span class='h6'>Weakness: </span>$pokemon[11]</p>
             <form method='get' action='carthandler.php'>
                 <div class='form-inline justify-content-end my-2'>
@@ -89,7 +93,7 @@ echo "<p><span class='h6'>Weakness: </span>$pokemon[11]</p>
                 <button type='submit' id='btnAddToCart' class='btn btn-info btn-block'><i class='fas fa-plus'></i> Add To Cart</button>
             </form>
             <h4 class='text-right'>Price: <span class='text-danger'>\$$pokemon[12]</span></h4>
-            <h5 class='text-right'>Estimated Delivery Date: <span class='text-danger'>Coming Soon!</span></h5>
+            <h5 class='text-right'>Estimated Delivery Date: <span class='text-danger'>$date</span></h5>
             </div>
         </div>
         

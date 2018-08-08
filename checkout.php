@@ -1,8 +1,10 @@
 <?php
 session_start();
-session_destroy();
 
 include "sidebar.php";
+
+// Clear the cart
+unset($_SESSION['cart']);
 
 echo "<!-- Page Content -->
         <div class='col-lg-10 h-100 col-sm-9 col-12'>
